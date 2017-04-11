@@ -2,7 +2,7 @@
 
 This is example for managing all of company admin users with ansible for all servers.
 
-It has been tested and used in production with `Ubuntu 16.04`, `Debian 8` & `CentOS 7` virtual servers. Other distros won't likely work at this time.
+It has been tested and used in production with `Ubuntu 16.04`, `Debian 8` & `CentOS 7` virtual servers.
 
 ## What's included?
 * Manage all your users with git and ansible

@@ -1,0 +1,10 @@
+# This list of users is created into this environment
+environment_admin_list:
+  - name: "Victor Villena"
+    username: "vvillena"
+    keys:
+      active:
+        - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAuG9unl3CJLdQbEq07t+X0G/P3KkyxbKvYJetn7Y9JjZrFGEDtp0kK91fDYsa75++TDZoa3Ja8my+7bmslUnuB1NRwxJ3LBXDCxt5fEbuXFtQ7gjFJ551iC2bxovpRFyDT4FwCUovBVSlJkjfdVdV7eNJ9ipQTaW1oz9QWuREI7uR4jWCY3HiQVuMOCuCTCIvbmZeruE684HeHCRhy9+WhI+uCGk004KcSisZ9aSEIAcDBq30bCAzoFQGkx4zmApT3ZuG7HYWsvTT5UDu7y5h9BLCHmPF285rPX/Jnwv0ZRM7Qf7TP23eh8JUkza/GKRJEC9pS7hjwKeQN5kkuquagQ=="
+      disabled: []
+    shell: "/bin/bash"
+    state: present

@@ -1,0 +1,2 @@
+[staging]
+35.184.40.230 ansible_user=yablokov sshd_service=ssh    # instance-5

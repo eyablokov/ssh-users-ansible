@@ -1,0 +1,35 @@
+- name: Setup admin users
+  hosts: all
+  gather_facts: yes
+  tags: ['users']
+  become: yes
+  vars_files:
+    - vars/main.yml
+  tasks:
+    # Creates users
+    - include: tasks/setup-users-and-group.yml
+    # Allows sudo for created users without passwords
+    - include: tasks/allow-sudo.yml
+
+# This is just a small best practise for all ssh connections
+- name: Setup SSH Security hardening
+  hosts: all
+  tags: ['security']
+  become: yes
+  tasks:
+    - name: Disallow root SSH access
+      lineinfile: dest=/etc/ssh/sshd_config
+                  regexp="^PermitRootLogin"
+                  line="PermitRootLogin prohibit-password"
+                  state=present
+      notify: restart ssh
+    - name: Disallow password SSH access
+      lineinfile: dest=/etc/ssh/sshd_config
+                  regexp="^PasswordAuthentication"
+                  line="PasswordAuthentication no"
+                  state=present
+      notify: restart ssh
+  handlers:
+    - name: restart ssh
+      service: name="{{ sshd_service }}" state=restarted
+

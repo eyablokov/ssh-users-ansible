@@ -1,0 +1,21 @@
+# These users will be created into all servers
+# All users with state: present will be created and state absent will be deleted
+company_admin_list:
+  - name: "Evgeniy Yablokov"
+    username: "eyablokov"
+    keys:
+      active:
+        - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeXbjN6VJT5MbkHUoHI4csZLzbLiZjTgRBOuSV9aD60sTtKS5zMVsiAsmt8M97DfQr2cULi995L01Q+oGL/5jytvlLz6iSUHSqGVcrLBjA0FmuuauNsakP9Y/naJaB4T7op9W/RH8GZkzKg0wxGDf+izSDO3xvH0pJyFxYX/BJiTrPW/oij6imoGHdUh0WIDt6Cu7cSji6tdi4pcjUc7CgguNqivjowQgHMASBpVatG8SJWFXVoDLxNpYm3rDnOUDnYJrUevsoLP126qjaTYswICEi6iKqpxzlvz1EwzXteCBzmuRvRpfCqFn30QPa8IkIHIASwtE6PGxsJx5anr9p eyablokov@me.com"
+      disabled:
+        - "ssh-dss AAAAB3NzaC1kc3MAAACBAK+/4s//vZ3Puw3pK/76Vq1xaF+N73e8H9I7xY/jdEqV6GQXU3gPuJmbTow4k64HbdxJtgBihK7PgotDx3/Mf166JssSV3paScqrrxByFo+UmBJiKscHjkSzPH5JUO46cpsRGWK+R6s1ioOQgCmCYmd7znpj6vEhEgY4JH9NX0xFAAAAFQCWjM8zUrbcW+7RXtAZUCBfdDXyMwAAAIBnWiWjjBCKkdpx47V/PLC8YVzxB2zS0frsQOGfkpA0Ao+HF9isxDOKf2leQgOvAJMeO17/ME95Ggk215Qs4yR79qpqTg6izrCrVSZLsoSJ2K4yEeTvD2yAniubfcB1lR/rHEeAN+UqgovirTGtVGx2lHeVmFZcprDC0/yKR8R+HgAAAIBASjaEyDHpz3vYcmOuysbdZEstz72t8pcX9RMp7hHYKFthmulrONACLy4ptmAONctcAMSPKcFrW1jwlU93mnkliCOWQQmNqfW/q4dV3+f0ZY/RG4nugcehgIjz7dxuIXDT047qvaeH6nM6y1u6fE8te/jdGMJkxgaAx0tjSaTtbg== Evgeniy Yablokov"
+    shell: "/bin/bash"
+    state: present
+  - name: "Example Person"
+    username: "example-quitted-person"
+    keys:
+      active: []
+      disabled: []
+    state: absent
+
+# This is the admin group where we will add users with sudo access
+admin_group: infra_admin
